@@ -6,7 +6,12 @@
       <div>
         <header class="flex flex-row items-center justify-between pb-4">
           <img class="w-3/4" src="../assets/logo_lg.png" alt="Workflow" />
-          <a class="cursor-pointer pt-1 text-zinc-900"> 登出 </a>
+          <button
+            @click.stop.prevent="logOut"
+            class="cursor-pointer pt-1 text-zinc-900"
+          >
+            登出
+          </button>
         </header>
         <div class="relative flex flex-col">
           <label class="text-sm" for="nickname"></label>
@@ -108,3 +113,12 @@
     </div>
   </div>
 </template>
+<script setup>
+import { useRouter } from 'vue-router'
+const router = useRouter()
+
+// 假裝登出
+function logOut() {
+  router.push('/login')
+}
+</script>
