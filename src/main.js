@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import './tailwind.css'
 import App from './App.vue'
 import { routes } from './routes.js'
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import { createPinia } from 'pinia' //導入pinia
 // 導入sweetaler2
 // import VueSweetalert2 from 'vue-sweetalert2'
@@ -12,7 +12,7 @@ import { createPinia } from 'pinia' //導入pinia
 const app = createApp(App)
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 })
 
