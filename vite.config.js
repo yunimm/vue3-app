@@ -12,5 +12,5 @@ export default defineConfig({
   server: {
     open: true,
   },
-  base:'/vue3-app/'
+  base:'/'
 })
